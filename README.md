@@ -1,5 +1,4 @@
-
-Email Validation: Regex for Dummies
+# Email Validation: Regex for Dummies
 
 The following tutorial is meant to help guide you into Regular Expressions. In JavaScript, regular expression are patturns used to match character combinations in strings. Several components define the building blocks to which we'll break down and evaluate in greater detail.
 
@@ -39,20 +38,38 @@ Quantifiers specify how many instances of a character, group, or character class
 
 QUANTIFIERS IN REGULAR EXPRESSIONS: There are different types of qualifiers, which are either defined as a "greedy qualifier" or "lazy qualifier". Below are the various versions that could be seen in regular expressions.  
 
-*	Match zero or more times.
-+	Match one or more times.
-?	Match zero or one time.
-{ n }	Match exactly n times.
-{ n ,}	Match at least n times.
-{ n , m }	Match from n to m times.
+*
++ 
+?
+{ n }
+{ n ,}
+{ n , m}
+
 
 For email validation, we use the qualifiers + and {}.
 
-### OR Operator
 
 ### Character Classes
 
+Character class allow you to tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets.
+
+Example: Character Classes
+‹[A-Z0-9.-]› 
+
+‹[A-Z0-9_!#$%&'*+/=?`{|}~^.-]›
+ 
 ### Flags
+
+Flags are used to alert specific sequences in regression expressions.
+
+Flag Types: 
+
+i - With this flag the search is case-insensitive: no difference between A and a.
+g - With this flag the search looks for all matches, without it only the first match is returned.
+m - Multiline mode
+s - Enables “dotall” mode, that allows a dot . to match newline character \n
+u - Enables full Unicode support
+y - “Sticky” mode: searching at the exact position in the text
 
 ### Grouping and Capturing
 
@@ -64,7 +81,19 @@ For email validation, we use the qualifiers + and {}.
 
 ### Back-references
 
+https://javascript.info/regexp-introduction
+
+https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s01.html
+
+https://www.javascripttutorial.net/regular-expression-anchors/
+
+https://www.javascripttutorial.net/regular-expression-anchors/
+
+https://docs.microsoft.com/en-us/dotnet/standard/base-types/quantifiers-in-regular-expressions
+
 ### Look-ahead and Look-behind
+
+Lookahead and lookbehind, collectively called “lookaround”, are zero-length assertions just like the start and end of line, and start and end of word anchors explained earlier in this tutorial. 
 
 ## Author
 Hunter Johnson 
