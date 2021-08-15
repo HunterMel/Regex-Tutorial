@@ -37,16 +37,17 @@ Use the m flag to enable the multiline mode that instructs the ^ and $ anchors t
 
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. The following table lists the quantifiers supported by .NET.
 
-QUANTIFIERS IN REGULAR EXPRESSIONS
-Greedy quantifier	Lazy quantifier	Description
-*	*?	Match zero or more times.
-+	+?	Match one or more times.
-?	??	Match zero or one time.
-{ n }	{ n }?	Match exactly n times.
-{ n ,}	{ n ,}?	Match at least n times.
-{ n , m }	{ n , m }?	Match from n to m times.
+QUANTIFIERS IN REGULAR EXPRESSIONS: There are different types of qualifiers, which are either defined as a "greedy qualifier" or "lazy qualifier". Below are the various versions that could be seen in regular expressions.  
+
+*	Match zero or more times.
++	Match one or more times.
+?	Match zero or one time.
+{ n }	Match exactly n times.
+{ n ,}	Match at least n times.
+{ n , m }	Match from n to m times.
 
 For email validation, we use the qualifiers + and {}.
+
 ### OR Operator
 
 ### Character Classes
