@@ -34,16 +34,9 @@ Use the m flag to enable the multiline mode that instructs the ^ and $ anchors t
 
 ### Quantifiers
 
-Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. The following table lists the quantifiers supported by .NET.
+Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.
 
-QUANTIFIERS IN REGULAR EXPRESSIONS: There are different types of qualifiers, which are either defined as a "greedy qualifier" or "lazy qualifier". Below are the various versions that could be seen in regular expressions.  
-
-*
-+ 
-?
-{ n }
-{ n ,}
-{ n , m}
+QUANTIFIERS IN REGULAR EXPRESSIONS: There are different types of qualifiers, which are either defined as a "greedy qualifier" or "lazy qualifier". Below are the various versions that could be seen in regular expressions.  *, +, ?, { n }, { n ,}, { n , m}
 
 
 For email validation, we use the qualifiers + and {}.
@@ -51,7 +44,7 @@ For email validation, we use the qualifiers + and {}.
 
 ### Character Classes
 
-Character class allow you to tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets.
+Character classes allow you to tell the regex engine to match only one out of several characters. This is accomplished by placing the characters you want to match between square brackets.
 
 Example: Character Classes
 ‹[A-Z0-9.-]› 
@@ -73,11 +66,24 @@ y - “Sticky” mode: searching at the exact position in the text
 
 ### Grouping and Capturing
 
+Regular expressions allow us to match text and also to pull information that might be available. This is done by defining groups of characters and capturing them using the special parentheses ( and ) metacharacters. Any subpattern inside a pair of parentheses will be captured as a group. This can be used to extract information like phone numbers or emails.
+
 ### Bracket Expressions
+
+A bracket expression is either a matching list expression or a non-matching list expression. It consists of one or more expressions: ordinary characters, collating elements, collating symbols, equivalence classes, character classes, or range expressions.The <right-square-bracket> ( ']' ) shall lose its special meaning and represent itself in a bracket expression if it occurs first in the list (after an initial <circumflex> ( '^' ), if any). Otherwise, it shall terminate the bracket expression, unless it appears in a collating symbol (such as "[.].]" ) or is the ending <right-square-bracket> for a collating symbol, equivalence class, or character class.
 
 ### Greedy and Lazy Match
 
+A greedy match will try to match the longest possible string. The lazy mode of quantifiers is an opposite to the greedy mode. It means: “repeat minimal number of times”. We can enable it by putting a question mark '?' after the quantifier, so that it becomes *? or +? or even ?? for '?'.
+
+
 ### Boundaries
+
+There are three different positions that qualify as word boundaries:
+
+1. Before the first character in the string, if the first character is a word character.
+2. After the last character in the string, if the last character is a word character.
+3. Between two characters in the string, where one is a word character and the other is not a word character.
 
 ### Back-references
 
@@ -90,6 +96,14 @@ https://www.javascripttutorial.net/regular-expression-anchors/
 https://www.javascripttutorial.net/regular-expression-anchors/
 
 https://docs.microsoft.com/en-us/dotnet/standard/base-types/quantifiers-in-regular-expressions
+
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html
+
+https://regexone.com/lesson/capturing_groups
+
+https://www.regular-expressions.info/wordboundaries.html
+
+https://medium.com/@318097/greedy-lazy-match-in-regular-expression-35ce8eca4060
 
 ### Look-ahead and Look-behind
 
